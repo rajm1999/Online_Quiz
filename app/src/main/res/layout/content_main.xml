@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <Button
+        android:id="@+id/btnOpenCamera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="OpenCamera"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgTaken"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="88dp"
+        android:onClick="ImageViewIsClicked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenGallery"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/btnOpenGallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Open Photo Gallery"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenCamera" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="391dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="104dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgTaken">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_border"
+                android:onClick="Button1IsClicked"
+                android:text="Button1"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_border"
+                android:onClick="Button2IsClicked"
+                android:text="Button2"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtWrongAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/wrong_image"
+                android:text="TextView"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtState"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="TextView"
+                android:textColor="@android:color/white" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnNextPlant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_border"
+                android:onClick="Button3IsClicked"
+                android:text="Button3"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_border"
+                android:onClick="Button4IsClicked"
+                android:text="Button4"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtRightAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:background="@drawable/correct_image"
+                android:gravity="right"
+                android:text="TextView"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B0000000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
